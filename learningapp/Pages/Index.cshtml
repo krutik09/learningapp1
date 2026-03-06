@@ -1,0 +1,32 @@
+﻿@page
+@model IndexModel
+@{
+    ViewData["Title"] = "Home page";
+}
+
+<div class="container-sm">
+
+      <h1>This is a list of Courses - version staging</h1>    
+
+    <table class="table table-striped table-bordered">
+        <thead class="table-dark">
+          <tr>
+            <th class="th-sm" scope="col">Course ID</th>
+            <th class="th-sm" scope="col">Course Name</th>
+            <th class="th-sm" scope="col">Rating</th>            
+          </tr>
+        </thead>
+         
+          <tbody>
+            @foreach(Courses course in @Model.Courses)
+            {
+            <tr>
+            <th scope="row">@course.Id</th>
+            <td>@course.Name</td>
+            <td>@course.Rating</td>            
+          </tr>
+          }
+
+            </tbody>  
+            </table>
+</div>
